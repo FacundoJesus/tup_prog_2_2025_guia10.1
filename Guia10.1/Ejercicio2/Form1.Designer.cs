@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            tbMotivo = new TextBox();
-            tbNombre = new TextBox();
             btnRegistrarReclamo = new Button();
+            tbNombre = new TextBox();
+            tbMotivo = new TextBox();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
             groupBox2 = new GroupBox();
-            label4 = new Label();
-            lsbReclamos = new ListBox();
             btnCrearOrdenTrabajo = new Button();
+            lsbReclamos = new ListBox();
+            label4 = new Label();
             groupBox3 = new GroupBox();
             btnEjecutarOrdenTrabajo = new Button();
-            lsbTrabajosEjecutados = new ListBox();
+            lsbOrdenesAEjecutar = new ListBox();
             label5 = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -63,32 +63,22 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Recepción de Reclamos";
             // 
-            // label1
+            // btnRegistrarReclamo
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(11, 48);
-            label1.Name = "label1";
-            label1.Size = new Size(102, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Datos del reclamo";
+            btnRegistrarReclamo.Location = new Point(104, 255);
+            btnRegistrarReclamo.Name = "btnRegistrarReclamo";
+            btnRegistrarReclamo.Size = new Size(103, 47);
+            btnRegistrarReclamo.TabIndex = 5;
+            btnRegistrarReclamo.Text = "Registrar Reclamo";
+            btnRegistrarReclamo.UseVisualStyleBackColor = true;
+            btnRegistrarReclamo.Click += btnRegistrarReclamo_Click;
             // 
-            // label2
+            // tbNombre
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(11, 80);
-            label2.Name = "label2";
-            label2.Size = new Size(54, 15);
-            label2.TabIndex = 1;
-            label2.Text = "Nombre:";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(17, 129);
-            label3.Name = "label3";
-            label3.Size = new Size(48, 15);
-            label3.TabIndex = 2;
-            label3.Text = "Motivo:";
+            tbNombre.Location = new Point(71, 77);
+            tbNombre.Name = "tbNombre";
+            tbNombre.Size = new Size(201, 23);
+            tbNombre.TabIndex = 4;
             // 
             // tbMotivo
             // 
@@ -99,21 +89,32 @@
             tbMotivo.Size = new Size(201, 120);
             tbMotivo.TabIndex = 3;
             // 
-            // tbNombre
+            // label3
             // 
-            tbNombre.Location = new Point(71, 77);
-            tbNombre.Name = "tbNombre";
-            tbNombre.Size = new Size(201, 23);
-            tbNombre.TabIndex = 4;
+            label3.AutoSize = true;
+            label3.Location = new Point(17, 129);
+            label3.Name = "label3";
+            label3.Size = new Size(48, 15);
+            label3.TabIndex = 2;
+            label3.Text = "Motivo:";
             // 
-            // btnRegistrarReclamo
+            // label2
             // 
-            btnRegistrarReclamo.Location = new Point(104, 255);
-            btnRegistrarReclamo.Name = "btnRegistrarReclamo";
-            btnRegistrarReclamo.Size = new Size(103, 47);
-            btnRegistrarReclamo.TabIndex = 5;
-            btnRegistrarReclamo.Text = "Registrar Reclamo";
-            btnRegistrarReclamo.UseVisualStyleBackColor = true;
+            label2.AutoSize = true;
+            label2.Location = new Point(11, 80);
+            label2.Name = "label2";
+            label2.Size = new Size(54, 15);
+            label2.TabIndex = 1;
+            label2.Text = "Nombre:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(11, 48);
+            label1.Name = "label1";
+            label1.Size = new Size(102, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Datos del reclamo";
             // 
             // groupBox2
             // 
@@ -127,14 +128,15 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Planificar Trabajo";
             // 
-            // label4
+            // btnCrearOrdenTrabajo
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(17, 48);
-            label4.Name = "label4";
-            label4.Size = new Size(98, 15);
-            label4.TabIndex = 6;
-            label4.Text = "Lista de reclamos";
+            btnCrearOrdenTrabajo.Location = new Point(93, 255);
+            btnCrearOrdenTrabajo.Name = "btnCrearOrdenTrabajo";
+            btnCrearOrdenTrabajo.Size = new Size(103, 47);
+            btnCrearOrdenTrabajo.TabIndex = 6;
+            btnCrearOrdenTrabajo.Text = "Crear Orden De Trabajo";
+            btnCrearOrdenTrabajo.UseVisualStyleBackColor = true;
+            btnCrearOrdenTrabajo.Click += btnCrearOrdenTrabajo_Click;
             // 
             // lsbReclamos
             // 
@@ -145,19 +147,19 @@
             lsbReclamos.Size = new Size(255, 169);
             lsbReclamos.TabIndex = 7;
             // 
-            // btnCrearOrdenTrabajo
+            // label4
             // 
-            btnCrearOrdenTrabajo.Location = new Point(93, 255);
-            btnCrearOrdenTrabajo.Name = "btnCrearOrdenTrabajo";
-            btnCrearOrdenTrabajo.Size = new Size(103, 47);
-            btnCrearOrdenTrabajo.TabIndex = 6;
-            btnCrearOrdenTrabajo.Text = "Crear Orden De Trabajo";
-            btnCrearOrdenTrabajo.UseVisualStyleBackColor = true;
+            label4.AutoSize = true;
+            label4.Location = new Point(17, 48);
+            label4.Name = "label4";
+            label4.Size = new Size(98, 15);
+            label4.TabIndex = 6;
+            label4.Text = "Lista de reclamos";
             // 
             // groupBox3
             // 
             groupBox3.Controls.Add(btnEjecutarOrdenTrabajo);
-            groupBox3.Controls.Add(lsbTrabajosEjecutados);
+            groupBox3.Controls.Add(lsbOrdenesAEjecutar);
             groupBox3.Controls.Add(label5);
             groupBox3.Location = new Point(604, 12);
             groupBox3.Name = "groupBox3";
@@ -174,15 +176,16 @@
             btnEjecutarOrdenTrabajo.TabIndex = 6;
             btnEjecutarOrdenTrabajo.Text = "Ejecutar Orden de Trabajo";
             btnEjecutarOrdenTrabajo.UseVisualStyleBackColor = true;
+            btnEjecutarOrdenTrabajo.Click += btnEjecutarOrdenTrabajo_Click;
             // 
-            // lsbTrabajosEjecutados
+            // lsbOrdenesAEjecutar
             // 
-            lsbTrabajosEjecutados.FormattingEnabled = true;
-            lsbTrabajosEjecutados.ItemHeight = 15;
-            lsbTrabajosEjecutados.Location = new Point(17, 80);
-            lsbTrabajosEjecutados.Name = "lsbTrabajosEjecutados";
-            lsbTrabajosEjecutados.Size = new Size(255, 169);
-            lsbTrabajosEjecutados.TabIndex = 7;
+            lsbOrdenesAEjecutar.FormattingEnabled = true;
+            lsbOrdenesAEjecutar.ItemHeight = 15;
+            lsbOrdenesAEjecutar.Location = new Point(17, 80);
+            lsbOrdenesAEjecutar.Name = "lsbOrdenesAEjecutar";
+            lsbOrdenesAEjecutar.Size = new Size(255, 169);
+            lsbOrdenesAEjecutar.TabIndex = 7;
             // 
             // label5
             // 
@@ -228,7 +231,7 @@
         private ListBox lsbReclamos;
         private GroupBox groupBox3;
         private Button btnEjecutarOrdenTrabajo;
-        private ListBox lsbTrabajosEjecutados;
+        private ListBox lsbOrdenesAEjecutar;
         private Label label5;
     }
 }
